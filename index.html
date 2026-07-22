@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b3b2e">
+  <meta name="description" content="Dashboard theo dõi tiến độ giải phóng mặt bằng các dự án thuộc Tổ công tác số 4 tỉnh Đắk Lắk">
+  <title>Tổ công tác số 4 · Theo dõi GPMB</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#tong-quan" aria-label="Về tổng quan"><span class="seal">04</span><span><b>TỔ CÔNG TÁC SỐ 4</b><small>Theo dõi chỉ đạo · đôn đốc GPMB</small></span></a>
+    <nav aria-label="Điều hướng chính"><a href="#tong-quan">Tổng quan</a><a href="#bieu-do">Tiến độ</a><a href="#du-an">Dự án</a><a href="#nguon">Nguồn</a></nav>
+  </header>
+
+  <main>
+    <section class="hero" id="tong-quan">
+      <div class="hero-copy"><span class="eyebrow">PHỤ LỤC KÈM THÔNG BÁO 326/TB-UBND · 17/7/2026</span><h1>Theo dõi tháo gỡ vướng mắc và tiến độ bàn giao mặt bằng</h1><p>Dữ liệu từng địa bàn, nhiệm vụ, đơn vị thực hiện và mốc hoàn thành của 08 dự án do Tổ công tác số 4 theo dõi, đôn đốc.</p><div class="updated">Cập nhật nguồn: 22/7/2026</div></div>
+      <div class="hero-mark"><span>ĐẮK LẮK</span><strong>GPMB</strong><small>Tổ công tác 04</small></div>
+    </section>
+
+    <section aria-labelledby="kpi-title"><div class="section-head"><div><span class="kicker">Bức tranh chung</span><h2 id="kpi-title">Tổng quan điều hành</h2></div></div><div class="kpis" id="kpis"></div></section>
+
+    <section id="bieu-do" aria-labelledby="chart-title"><div class="section-head"><div><span class="kicker">So sánh nhanh</span><h2 id="chart-title">Tiến độ GPMB theo dự án / địa bàn</h2></div><p>Tỷ lệ lấy trực tiếp từ file nguồn; dự án chưa có số liệu được ghi “Chưa xác định”.</p></div><div class="chart-card" id="chart" role="img" aria-label="Biểu đồ thanh tỷ lệ giải phóng mặt bằng"></div></section>
+
+    <section id="du-an" aria-labelledby="projects-title"><div class="section-head"><div><span class="kicker">Tra cứu và đôn đốc</span><h2 id="projects-title">Danh mục dự án</h2></div><p id="result-count" aria-live="polite"></p></div>
+      <div class="filters" role="search" aria-label="Bộ lọc dự án"><label><span>Tìm kiếm</span><input id="search" type="search" placeholder="Tên dự án, địa bàn, vướng mắc…" autocomplete="off"></label><label><span>Địa bàn</span><select id="area"><option value="">Tất cả địa bàn</option></select></label><label><span>Trạng thái</span><select id="status"><option value="">Tất cả trạng thái</option><option value="done">Đã hoàn thành</option><option value="risk">Cần đôn đốc</option><option value="planned">Đang chuẩn bị</option></select></label><button id="reset" type="button">Xóa bộ lọc</button></div>
+      <div class="project-list" id="projects"></div><div class="empty" id="empty" hidden>Không tìm thấy dự án phù hợp. Hãy thử bỏ bớt điều kiện lọc.</div>
+    </section>
+
+    <section class="source" id="nguon"><div><span class="kicker">Nguồn và phương pháp</span><h2>Dữ liệu được giữ nguyên theo hồ sơ</h2><p>Nguồn chính: “PL - TCT04 Tiến độ giải quyết chi tiết từng dự án”, kèm Thông báo kết luận số 326/TB-UBND ngày 17/7/2026. Dashboard không suy diễn tỷ lệ cho các dự án chưa có số liệu định lượng.</p></div><a href="https://docs.google.com/spreadsheets/d/1nuDPlM8gsSLf6DfzBgc8oaoEr6IcCBuC/edit?gid=1199388610#gid=1199388610" target="_blank" rel="noopener">Mở bảng dữ liệu gốc ↗</a></section>
+  </main>
+  <footer>Dashboard Tổ công tác số 4 · Tỉnh Đắk Lắk · 2026</footer>
+  <script src="app.js"></script>
+</body>
+</html>
